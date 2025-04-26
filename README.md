@@ -107,16 +107,6 @@
 
 ---
 
-## 📸 Screenshots (Optional)
-
-> _(Add screenshots of your UI here if you want)_
-
-| Request Panel | Response Panel |
-|:--------------:|:--------------:|
-| ![Request Screenshot](link-to-screenshot) | ![Response Screenshot](link-to-screenshot) |
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — feel free to use, modify, and share it!
