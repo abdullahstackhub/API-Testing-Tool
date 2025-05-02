@@ -1,122 +1,131 @@
-# 🚀 Lightweight API Testing Tool
+## 🚀 API Testing Tool
 
-![Flask](https://img.shields.io/badge/Backend-Flask-blue)
-![Frontend](https://img.shields.io/badge/Frontend-HTML%2C%20CSS%2C%20JS-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
-> A lightweight, web-based API testing tool to test **REST APIs** — supports **GET**, **POST**, **PUT**, **OPTIONS**, and **DELETE** methods.  
-> Designed to be fast, simple, and powerful.  
-> _Think of it as Postman, but minimal and web-native._
+A dynamic REST API testing tool built with a **shared frontend-backend architecture** to demonstrate real-world API integration, proxy-based request handling, and dynamic user input processing.
 
 ---
 
-## ✨ Features
+### 📌 Purpose
 
-- ✅ Test **GET**, **POST**, **PUT**, **OPTIONS**, **DELETE** requests
-- ✅ Send **Headers**, **Query Params**, **Body** (JSON, Form-Data)
-- ✅ View **Status Code**, **Response Time**, **Response Size**
-- ✅ Built with **Flask (Python)** and **Vanilla JS** + **Bootstrap**
-- ✅ **Frontend and Backend are Independent**
-- ✅ Simple architecture — easy to understand and extend
+This project was built to showcase:
 
----
-
-## 🛠 Tech Stack
-
-| Area | Technologies |
-|:----:|:-------------|
-| Backend | Flask (Python) |
-| Frontend | HTML, CSS, Bootstrap, JavaScript (Axios) |
+* 🔄 **Shared system architecture**: decoupled frontend and backend structure.
+* 🔧 **Dynamic API handling**: sending user-defined REST API requests through a proxy.
+* ⚙️ **Data flow control**: capturing, transmitting, and processing data across the stack.
+* 📬 **Endpoint & method management**: supporting GET, POST, PUT, DELETE, etc., with headers, params, and body data.
 
 ---
 
-## 🧐 How It Works
+### 🛠 Tech Stack
 
-1. **Frontend** collects the API request details (URL, headers, parameters, body, method).
-2. Sends the data to **Flask backend** using **Axios**.
-3. Flask has dedicated endpoints (`/send_get`, `/send_post`, etc.) for each method.
-4. Flask makes the actual API request based on user's input.
-5. Flask sends back:
-   - Response headers
-   - Response body
-   - Status code
-   - Response time (ms)
-   - Response size
-6. **Frontend** dynamically shows the response to the user.
+| Layer    | Technology                                      |
+| -------- | ----------------------------------------------- |
+| Frontend | HTML, JavaScript, Axios                         |
+| Backend  | Flask (Python)                                  |
+| Hosting  | GitHub Pages (Frontend), Flask Server (Backend) |
 
 ---
 
-## 🏩 Project Structure
+### 🧠 Key Features
+
+* 📤 **User-submitted form** to input:
+
+  * API method (GET, POST, etc.)
+  * Target URL
+  * Headers
+  * Query parameters
+  * Body data
+
+* 📡 **Frontend-to-backend communication** via `axios` to transmit input data to the Flask server.
+
+* 🔀 **Flask as a proxy server** that:
+
+  * Constructs and sends the request to the external API.
+  * Receives and parses the response.
+  * Returns response data to the frontend.
+
+* 📊 **Dynamic response rendering** in HTML:
+
+  * Status code
+  * Response headers
+  * JSON or raw response body
+
+---
+
+### 🧱 Architectural Highlights
+
+* 🔗 **Loosely coupled system**:
+
+  * Frontend and backend are completely dislocated and deployable independently.
+  * Enables horizontal scaling and separation of concerns.
+
+* 🛡️ **Proxy architecture**:
+
+  * Enables secure, controlled API testing by shielding frontend from CORS and key exposure.
+
+* 🧰 **Built with job-readiness in mind**:
+
+  * Demonstrates real skills in endpoint management, error handling, and full request lifecycle handling.
+
+---
+
+### 📁 Folder Structure
 
 ```
-📁 project-root/
- ├── 📄 app.py            # Flask backend
- ├── 📄 requirements.txt  # Python dependencies
- ├── 📁 static/            # Static files (CSS, JS)
- ├── 📁 templates/         # HTML templates
- └── 📄 README.md          # (You are here)
+├── frontend/
+│   └── index.html
+│   └── main.js
+├── backend/
+│   └── app.py
+│   └── requirements.txt
 ```
 
 ---
 
-## 🚀 Installation and Setup
+### ⚡ Getting Started
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
-   ```
+#### Frontend (GitHub Pages / Local)
 
-2. **Install Python dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+Open frontend/index.html in any browser
+```
 
-3. **Start the Flask server:**
-   ```bash
-   python app.py
-   ```
+#### Backend (Flask Server)
 
-4. **Start the Frontend:**
-   - Open the `index.html` using **Live Server** (VS Code Extension).
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
 ---
 
-## 🧪 Usage
+### 🎯 Why I Built This
 
-- Enter your **API URL**.
-- Select the **HTTP method**.
-- Add **headers**, **params**, and **body** (if needed).
-- Hit **Send**.
-- View the **response** in a beautiful, clean format — including:
-  - Status Code
-  - Headers
-  - Body
-  - Response Time
-  - Size
+As an entry-level web developer aiming to showcase **real-world, job-ready skills**, I built this tool to:
+
+* Demonstrate architectural thinking (decoupled, distributed systems)
+* Solve practical problems (CORS handling, API testing)
+* Exhibit dynamic data processing and API integration logic
+* Show I can build not just code — but complete, scalable systems
 
 ---
 
-## 🎯 Purpose of This Project
+### 📸 Screenshots (Optional)
 
-- **Demonstrate** skills in API management and data handling.
-- Showcase **separation of frontend/backend** architecture.
-- **Real-world project** for handling APIs, form-data, JSON, etc.
-- Built **from scratch** with **Flask** and **Vanilla JS** without heavy frameworks.
+*Add a few demo images here showing the UI, request form, and response rendering.*
 
 ---
 
-## 📄 License
+### 📂 Future Improvements
 
-This project is licensed under the **MIT License** — feel free to use, modify, and share it!
-
----
-
-## 🙏 Credits
-
-- **Built with ❤️ by Abdullah Hussain**
-- Tools used: Flask, Vanilla JavaScript, Bootstrap
+* Replace Flask with **FastAPI** or **Express.js** for performance gains
+* Add history tab (localStorage-based)
+* Allow saving & reusing API configurations
+* Add request duration timer and better error visual feedback
 
 ---
 
+### 📬 Contact
+
+**Developer**: Abdullah
+**Agency**: [Devura Digital Solutions](https://devura.kesug.com)
